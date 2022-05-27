@@ -55,6 +55,7 @@ body{
     display: flex;
     width: 97%;
     background-color: antiquewhite;
+    padding-right: .5em;
 }
 
 .Topnav{
@@ -69,6 +70,7 @@ body{
 .TopNavRight{
     text-align: right;
     padding-right: 1em;
+    padding-top: .5em; 
 }
 
 .BotNav{
