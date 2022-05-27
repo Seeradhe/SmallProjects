@@ -26,6 +26,8 @@ body{
 }
 
 .itemtop{
+    text-align: center;
+    color: black;
     flex-grow: 1;
     align-self: center;
     background-color: aliceblue;
@@ -42,14 +44,31 @@ body{
     margin-left: .75em;
     margin-top: .75em;
     height: 24em;
+    color: black;
+    padding: 1em;
+    text-align: center;
+    
+}
+
+
+.containerTopNav{
+    display: flex;
+    width: 97%;
+    background-color: antiquewhite;
 }
 
 .Topnav{
-    width: 97%;
+    flex: 1;
+    width: 100%;
     background-color: antiquewhite;
     padding-left: 1em;
     padding-top: .5em;
     padding-bottom: .25em; 
+}
+
+.TopNavRight{
+    text-align: right;
+    padding-right: 1em;
 }
 
 .BotNav{

@@ -3,29 +3,59 @@
 <head>
 <title>RaspberryPI Dasboard</title>
 <link rel="stylesheet" href="index.css">
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 
 <body>
-    <div class = "Topnav">
-        <h1>Dashboard</h1>
-        <p>This is a Dashboard to display some Data being read out of the RaspberryPI and the used Grove BaseKit.</p> 
+    <div class = "containerTopNav">
+        <div class = "Topnav">
+            <h1>Dashboard</h1>
+            <p>This is a Dashboard to display some Data being read out of the RaspberryPI and the used Grove BaseKit.</p> 
+        </div>
+        <div class = "TopNavRight">
+tet
+        </div>
     </div>
-
     <div class = "spacer"></div>
 
     <div class = "MainContent">        
         <div class = "container">
-            <div class = "itemtop"></div>
+            <div class = "itemtop">
+                <h2>Temperature</h2>
+            </div>
 
-            
-            <div class = "itemtop"></div>
+            <div class = "itemtop">
+                
+                <h2>Humidity</h2>
+            </div>
+            <div class = "itemtop">
+                
+                <h2>LightSensor</h2>
+            </div>
+            <div class = "itemtop">
+                
+                <h2>Buzzer on?</h2>
+            </div>
         </div>
             
         <div class = "container">
-            <div class = "itembot"></div>
+            
+            <div class = "itembot">
+                <h2>Temperature Diagram</h2>
 
-            <div class = "itembot"></div>
-            <div class = "itembot"></div>
+                <div>
+                    <py-script>
+                        print("Output a random letter")
+                        var = 6
+                        print(var)
+                      </py-script>
+                
+                </div>
+                </div>
+
+            <div class = "itembot">
+                <h2>Humidity Diagram</h2>
+            </div>
 
         </div>    
         
