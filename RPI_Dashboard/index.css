@@ -43,11 +43,17 @@ body{
     margin-bottom: .75em;
     margin-left: .75em;
     margin-top: .75em;
-    height: 24em;
+    height: 30em;
     color: black;
     padding: 1em;
     text-align: center;
     
+}
+
+.diagram{
+    width: auto;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -85,4 +91,10 @@ body{
 
 .spacer{
     height: .75em;
+}
+
+.OutputTop{
+    font-size: 5em;
+    padding-top: 1em;
+    padding-left: 0em;
 }

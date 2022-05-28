@@ -4,6 +4,12 @@
     <title>RaspberryPI Dasboard</title>
     <link rel="stylesheet" href="index.css">
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - numpy
+        - matplotlib
+        - paths:
+          - ./python/temp.json
+    </py-env>
 </head>
 
 <body>
@@ -14,7 +20,7 @@
         </div>
         <div class = "TopNavRight">
             <h1>
-                <py-script src="./main.py"> </py-script>
+                <py-script src="./python/main.py"> </py-script>
             </h1>
         </div>
     </div>
@@ -22,22 +28,47 @@
 
     <div class = "MainContent">        
         <div class = "container">
+
             <div class = "itemtop">
                 <h2>Temperature</h2>
+                
+                <div class = "OutputTop">
+                    <div id = "four" ></div>
+                    <py-script output="four">
+                        import random
+                        print("{} °C".format(random.randint(0,1024)))
+                    </py-script>
+            </div>
+
             </div>
 
             <div class = "itemtop">
                 
                 <h2>Humidity</h2>
+
+                <div class = "OutputTop">
+                    <div id = "lmao" ></div>
+                    <py-script output="lmao">
+                        import random
+                        print("{} %".format(random.randint(0,1024)))
+                    </py-script>
+            </div>
+             
+                
+
             </div>
             <div class = "itemtop">
                 
-                <h2>LightSensor</h2>
+                <h2>Light Intensity</h2>
+                <div class = "OutputTop">
+                    <div id = "test" ></div>
+                    <py-script output="test">
+                        import random
+                        print("{}".format(random.randint(0,1024)))
+                    </py-script>
             </div>
-            <div class = "itemtop">
-                
-                <h2>Buzzer on?</h2>
             </div>
+           
         </div>
             
         <div class = "container">
@@ -45,19 +76,42 @@
             <div class = "itembot">
                 <h2>Temperature Diagram</h2>
 
-                <div>
-                    <py-script>
-                        print("Output a random letter")
-                        var = 6
-                        print(var)
-                      </py-script>
-                
-                </div>
+                <div id = "nude" class = "diagram"></div>
+                <py-script output="nude">
+                  import matplotlib.pyplot as plt
+                  import numpy as np
+                    
+                  plt.rcParams["figure.figsize"] = (8,4)
+
+                  x = np.random.randn(1000)
+                  y = np.random.randn(1000)
+            
+                  fig, ax = plt.subplots()
+                  ax.scatter(x, y)
+                  fig
+                </py-script>
                 </div>
 
             <div class = "itembot">
                 <h2>Humidity Diagram</h2>
-                <py-repl></py-repl>
+                <div id = "plot" class = "diagram"></div>
+                <py-script output="plot">
+                  import matplotlib.pyplot as plt
+                  import numpy as np
+                    
+                  plt.rcParams["figure.figsize"] = (8,4)
+
+                  
+                  x = np.random.randn(1000)
+                  y = np.random.randn(1000)
+            
+                  fig, ax = plt.subplots()
+                  ax.scatter(x, y)
+
+                  ax.set_xlim([0, 60])
+                  ax.set_ylim([0,100])
+                  fig
+                </py-script>
             </div>
 
         </div>    
@@ -68,9 +122,8 @@
     <div class = "spacer"></div>
 
     <div class = "BotNav">
-        <p>The source code for the entire project can be found on the following git repo:           <a href = "https://www.google.de/" target = "_blank">Test</a></p>
-        <p>This project was created as a Task for the Duale Hochschule Baden-Würtemberg (DHBW) Stuttgart - any content is private and not of public use.</p>
-        <p>Written and created by: Lars Hoehne</p>
+        <p>The source code for the entire project can be found on the following git repo:           <a href = "https://www.google.de/" target = "_blank">Git/Seeradhe/SmallProjects</a></p>
+        <p>Written and created by Lars Hoehne</p>
     </div>
 </body>
 
