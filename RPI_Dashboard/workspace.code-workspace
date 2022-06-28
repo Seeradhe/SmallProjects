@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "SmallProjects",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"livePreview.defaultPreviewPath": "/RPI_Dashboard/index.html"
+	}
+}
